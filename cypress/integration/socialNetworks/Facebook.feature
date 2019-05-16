@@ -2,10 +2,14 @@ Feature: The Facebook
 
   I want to open a social network page
 
-  Scenario: Opening a social network page
-    Given I open Facebook page
-    Then I see "Facebook" in the title
+  Scenario Outline: Opening a Facebook page - postive scenario
+    Given I open Facebook page "<username>" and "<pass>"
+    Then I see "<status>" in the title
 
-  Scenario: Different kind of opening
-    Given I kinda open Facebook page
-    Then I am very happy
+    Examples:
+    | username                       | pass           | status              |
+    | developer@hammsolutions.co.uk  | hammsolutions  | Facebook            |
+    | aa@hammsolutions.co.uk         | hammsolutions1 | Log in to Facebook  |
+
+# create post on FB
+
