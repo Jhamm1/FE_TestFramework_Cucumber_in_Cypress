@@ -1,36 +1,36 @@
 {
-  "name": "cypress-cucumber-example",
-  "version": "1.0.0",
-  "description": "Example of cypress with cucumber",
-  "main": "index.js",
-  "scripts": {
-    "test": "node_modules/.bin/cypress open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheBrainFamily/cypress-cucumber-example.git"
-  },
-  "keywords": [
-    "cypress",
-    "cucumber",
-    "testing"
-  ],
-  "author": "Lukasz Gandecki",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TheBrainFamily/cypress-cucumber-example/issues"
-  },
-  "homepage": "https://github.com/TheBrainFamily/cypress-cucumber-example#readme",
-  "dependencies": {
-    "cypress-cucumber-preprocessor": "~1.8.0",
-    "fs": "0.0.1-security",
-    "logger": "0.0.1"
-  },
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
-  },
-  "devDependencies": {
-    "cypress": "^4.5.0",
-    "mochawesome": "^6.1.1"
-  }
+    "name": "cypress-cucumber-example",
+    "version": "1.0.0",
+    "description": "Example of cypress with cucumber",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx cypress run --reporter mochawesome"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheBrainFamily/cypress-cucumber-example.git"
+    },
+    "keywords": [
+        "cypress",
+        "cucumber",
+        "testing"
+    ],
+    "author": "Lukasz Gandecki",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TheBrainFamily/cypress-cucumber-example/issues"
+    },
+    "homepage": "https://github.com/TheBrainFamily/cypress-cucumber-example#readme",
+    "dependencies": {
+        "cypress-cucumber-preprocessor": "~1.8.0",
+        "fs": "0.0.1-security",
+        "logger": "0.0.1"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    },
+    "devDependencies": {
+        "cypress": "^4.5.0",
+        "mochawesome": "^6.1.1"
+    }
 }

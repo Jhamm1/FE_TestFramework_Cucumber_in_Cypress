@@ -50,6 +50,7 @@ run `$ npm test`
 
 run `npx cypress run --reporter mochawesome`
 
+`node_modules/.bin/cypress open`
 
 ### Running using docker
 
@@ -72,7 +73,6 @@ $ chmod +x ./scripts/generate-report.sh
 ```
 ```
 $ ./scripts/generate-report.sh 
-
 ```
 
 Output logs from the container
