@@ -10,7 +10,7 @@ jobs:
       - node/with-cache:
           steps:
             - run: chmod +x scripts/ci-setup.sh
-            - run: ./project/scripts/ci-setup.sh
+            - run: ./scripts/ci-setup.sh
             - run: npm install --save-dev cypress
             - run: npm install
             - run: npm test
