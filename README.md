@@ -4,7 +4,7 @@
 
 ## Overview
 
-This façade service is used to help us migrate our microservices from SBE to S3.
+This test service is used to help us migrate our microservices from SBE to S3.
 
 It will complete the following tasks for us:
 
@@ -75,17 +75,7 @@ $ ./scripts/generate-report.sh
 
 ```
 
-**Output logs from the ran container**
+Output logs from the container
 
 ```docker logs``` *[container ID]*
-
-
-
-
-
-
-Initial example of using Cypress with Cucumber.
-
-There are examples that are part of a Continuous Integration build in the main repo, that also showcase more advanced
-usage, please refer there now - https://github.com/TheBrainFamily/cypress-cucumber-preprocessor/tree/master/cypress
 

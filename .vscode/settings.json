@@ -1,5 +1,7 @@
 {
   "files.exclude": {
-    "node_modules": "explorerExcludedFiles"
+    "node_modules": "explorerExcludedFiles",
+    "package-lock.json": "explorerExcludedFiles",
+    ".vscode": "explorerExcludedFiles"
   }
 }
