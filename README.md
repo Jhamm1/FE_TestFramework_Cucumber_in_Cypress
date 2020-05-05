@@ -1,16 +1,91 @@
-# cypress-cucumber-example
+[![codecov](https://codecov.io/gh/EurostarDigital/red_box/branch/master/graph/badge.svg?token=91Qp8Vr2NC)](https://codecov.io/gh/EurostarDigital/red_box)
+
+# FE_TestFramework-Cucumber-in-Cypress
+
+## Overview
+
+This façade service is used to help us migrate our microservices from SBE to S3.
+
+It will complete the following tasks for us:
+
+* Create proxy service between SBE and Eurostar microservices
+* Repoint all microservices to this interface (instead of directly to SBE)
+* Create second implementation of this interface which talks to S3 Passenger API
+* Change configuration so API requests are routed to S3 Passenger API instead of SBE
+
+A full suite of comparison tests will run on this façade service as part of continuous integration to compare SBE and Sqills S3 responses to confirm data integrity.
+
+### Folder structure
+> Please see the folder structure below.
+
+```bash
+├── AaaS_webDriverIO_1
+├── lib
+	├── /*.js
+├── node_modules
+├── test
+	├── homepage.js
+├── test-results
+	├── report
+		├── index.html
+├── docker-compose.yml
+├── Dockerfile
+├── Makefile
+├── package.json
+├── README.md
+└── wdio.conf.js (configuration setup)
+```
+
+## How to run this automation framework
+
+### Installation 
+
+Before installing the dependency you need to have node version >=10 install on your machine
+
+run `$ npm install`
+
+### Unit test
+
+run `$ npm test`
+
+run `npx cypress run --reporter mochawesome`
+
+
+### Running using docker
+
+Please ensure you have got docker installed on your machine
+
+**Build docker image**
+
+`$ docker build -t cypressproject .`
+
+**Run the container**
+
+`$ docker run cypressproject npx cypress run`
+
+
+
+### Generate test report
+
+```
+$ chmod +x ./scripts/generate-report.sh
+```
+```
+$ ./scripts/generate-report.sh 
+
+```
+
+**Output logs from the ran container**
+
+```docker logs``` *[container ID]*
+
+
+
+
+
+
 Initial example of using Cypress with Cucumber.
 
 There are examples that are part of a Continuous Integration build in the main repo, that also showcase more advanced
 usage, please refer there now - https://github.com/TheBrainFamily/cypress-cucumber-preprocessor/tree/master/cypress
 
-# Scoped hooks:
-
-Unfortunately, running all tests through GUI causes an unexpected behavior with hooks:
-
-[TheBrainFamily/cypress-cucumber-preprocessor#139](https://github.com/TheBrainFamily/cypress-cucumber-preprocessor/issues/139)
-which is an acknowledged bug in cypress itself:
-
-[cypress-io/cypress#3323](https://github.com/cypress-io/cypress/issues/3323)
-
-Our advice is to not use the "run all" in the GUI - which would be slow once you have enough .feature files anyway. Running through cypress run (for CI use) works as described. 
