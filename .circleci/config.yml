@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: chmod +x project/scripts/ci-setup.sh
+            - run: chmod +x scripts/ci-setup.sh
             - run: ./project/scripts/ci-setup.sh
             - run: npm install --save-dev cypress
             - run: npm install
